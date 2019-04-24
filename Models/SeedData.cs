@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Lab11.Models
 {
@@ -21,17 +22,16 @@ namespace Lab11.Models
                     new Professor
                     {
                         FirstName = "Kareem",
-                        LastName  = "Dana"
+                        LastName  = "Dana",
+                        Courses = new List<Course> {
+                            new Course {Description = "CIDM3312"},
+                            new Course {Description = "CIDM4360"},
+                        }
                     },
                     new Professor
                     {
                         FirstName = "Nesrin",
-                        LastName  = "Bakir"
-                    },
-                    new Professor
-                    {
-                        FirstName = "Sean",
-                        LastName  = "Humpheries"
+                        LastName  = "Bakir",   
                     }
                 );
                 

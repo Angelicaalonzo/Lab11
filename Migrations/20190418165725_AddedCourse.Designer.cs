@@ -3,14 +3,16 @@ using System;
 using Lab11.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Lab11.Migrations
 {
     [DbContext(typeof(ProfessorDbContext))]
-    partial class ProfessorDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190418165725_AddedCourse")]
+    partial class AddedCourse
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

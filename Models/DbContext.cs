@@ -8,6 +8,7 @@ namespace Lab11.Models
 			: base(options)
 		{
 		}
-		public DbSet<Professor> Professor {get; set;}
+		public DbSet<Lab11.Models.Professor> Professor {get; set;}
+		public DbSet<Lab11.Models.Course> Course {get;set;}
 	}
 }

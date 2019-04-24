@@ -1,0 +1,18 @@
+@page
+@model ProfessorModel
+@{
+    ViewData["Title"] = "Professor Page";
+}
+
+
+@foreach (var b in Model.Professors)
+{
+    <p>@Html.DisplayFor(modelItem => b.FirstName, b.LastName)</p>
+}
+<label class="control-label"></label>
+<form method= "post">
+<select asp-items="Model.ProfessorDropDown" class="form-control">
+    <option value="" >-- Select Professor -- </option>
+</select>
+<button type="submit">submit</button>
+</form>

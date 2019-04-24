@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
+
+using Microsoft.EntityFrameworkCore;
 using Lab11.Models;
 
 namespace Lab11
@@ -23,6 +25,10 @@ namespace Lab11
                 var services = scope.ServiceProvider;
                 try
                 {
+                    var context=services.
+                    GetRequiredService<ProfessorDbContext>();
+                    context.Database.Migrate();
+
                     SeedData.Initialize(services);
                 }
                 catch (Exception ex)
